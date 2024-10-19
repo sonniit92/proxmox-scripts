@@ -46,7 +46,7 @@ If you are not using proxmox or want to install a app on a existing install, you
 ***Note:*** _Only Alpine, Debian and Ubuntu are currently supported_
 
 ```sh
-sh -c "$(wget --no-cache -qO- https://raw.githubusercontent.com/sonniit92/proxmox/main/install.sh)" -s --app nginx-proxy-manager
+sh -c "$(wget --no-cache -qO- https://raw.githubusercontent.com/sonniit92/proxmox/bob/main/install.sh)" -s --app nginx-proxy-manager
 ```
 
 ### Command line arguments
