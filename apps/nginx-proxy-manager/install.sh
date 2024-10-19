@@ -138,7 +138,7 @@ step_start "Openresty"
 
     repository=http://openresty.org/package/$EPS_OS_DISTRO
     if [ "$EPS_OS_ARCH" != "amd64" ]; then
-      repository=http://openresty.org/package/$EPS_OS_ARCH/$EPS_OS_DISTRO
+      repository=http://openresty.org/package/$EPS_OS_ARCH/jammy
     fi
 
     source="deb [arch=$EPS_OS_ARCH signed-by=/usr/share/keyrings/openresty.gpg] $repository $EPS_OS_CODENAME "
