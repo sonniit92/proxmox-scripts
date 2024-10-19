@@ -136,13 +136,13 @@ step_start "Openresty"
   else
     os_fetch -O- https://openresty.org/package/pubkey.gpg | gpg --yes --dearmor -o /usr/share/keyrings/openresty.gpg &>$__OUTPUT
 
-    repository=http://openresty.org/package/$EPS_OS_DISTRO
+    repository=http://openresty.org/package/jammy 
     if [ "$EPS_OS_ARCH" != "amd64" ]; then
       repository=http://openresty.org/package/$EPS_OS_ARCH/jammy
     fi
 
     source="deb [arch=$EPS_OS_ARCH signed-by=/usr/share/keyrings/openresty.gpg] $repository $EPS_OS_CODENAME "
-    if [ "$EPS_OS_DISTRO" = "debian" ]; then
+    if [ "jammy" = "debian" ]; then
       source+="openresty"
     else
       source+="main"
